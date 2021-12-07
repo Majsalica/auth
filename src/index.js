@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Login from "./Pages/Login";
+import Registration from "./Pages/Registration";
 
 ReactDOM.render(
   <React.StrictMode>
+    <Registration />
   </React.StrictMode>,
   document.getElementById('root')
 );
