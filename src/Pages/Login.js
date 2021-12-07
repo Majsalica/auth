@@ -3,9 +3,14 @@ import Label from "../Components/Label";
 import Button from "../Components/Button";
 
 export default function Login() {
+    const handleLogin = (e) => {
+        e.preventDefault()
+        // do Login logic
+    }
+
     return (
         <div className="container">
-            <form className="col-6 offset-3">
+            <form onSubmit={handleLogin} className="col-6 offset-3">
                 <h3 className="mt-5">Login</h3>
                 <hr />
                 <div className="mb-3">

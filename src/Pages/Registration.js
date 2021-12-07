@@ -3,9 +3,14 @@ import Label from "../Components/Label";
 import Button from "../Components/Button";
 
 export default function Registration() {
+    const handleRegistration = (e) => {
+        e.preventDefault()
+        // do Registration logic
+    }
+
     return (
         <div className="container">
-            <form className="col-6 offset-3">
+            <form onSubmit={handleRegistration} className="col-6 offset-3">
                 <h3 className="mt-5">Registration</h3>
                 <hr />
                 <div className="mb-3">
