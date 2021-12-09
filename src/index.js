@@ -4,10 +4,16 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from "./Pages/Login";
 import Registration from "./Pages/Registration";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Registration />
+      <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/registration" element={<Registration />} />
+          </Routes>
+      </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
