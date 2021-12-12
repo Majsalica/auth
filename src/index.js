@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min';
 import Login from "./Pages/Login";
 import Registration from "./Pages/Registration";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
