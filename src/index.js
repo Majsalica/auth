@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap.min';
 import Login from "./Pages/Login";
 import Registration from "./Pages/Registration";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Dashboard from "./Pages/Dashboard";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.render(
           <Routes>
               <Route path="/" element={<Login />} />
               <Route path="/registration" element={<Registration />} />
+              <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
       </BrowserRouter>
   </React.StrictMode>,
