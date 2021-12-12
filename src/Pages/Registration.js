@@ -3,6 +3,26 @@ import Label from "../Components/Label";
 import Button from "../Components/Button";
 
 export default function Registration() {
+    const register = async (name, email, password) => {
+        let response = await fetch('http://localhost:8000/api/register', {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                password: password
+            })
+        })
+        if (!response.ok) {
+            // Do registration error handling
+        }
+        return response.json()
+    }
+
+
     const handleRegistration = (e) => {
         e.preventDefault()
         // do Registration logic
