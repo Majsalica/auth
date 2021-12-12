@@ -3,6 +3,25 @@ import Label from "../Components/Label";
 import Button from "../Components/Button";
 
 export default function Login() {
+
+    const login = async (email, password) => {
+        let response = await fetch('http://localhost:8000/api/login', {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: email,
+                password: password
+            })
+        })
+        if (!response.ok) {
+            // Do some error handling
+        }
+        return response.json()
+    }
+
     const handleLogin = (e) => {
         e.preventDefault()
         // do Login logic
